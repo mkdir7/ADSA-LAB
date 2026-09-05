@@ -4,7 +4,6 @@ void mergeSort(int arr[], int n) {
 
     int temp[n];
 
-    // size = size of already sorted subarrays
     for (int size = 1; size < n; size *= 2) {
 
         for (int left = 0; left < n - 1; left += 2 * size) {
@@ -22,7 +21,6 @@ void mergeSort(int arr[], int n) {
             int j = mid + 1;
             int k = left;
 
-            // Merge two sorted parts
             while (i <= mid && j <= right) {
                 if (arr[i] <= arr[j])
                     temp[k++] = arr[i++];

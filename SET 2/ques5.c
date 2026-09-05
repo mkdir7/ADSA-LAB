@@ -34,7 +34,6 @@ void mergeSort(int arr[], int n) {
             while (j <= right)
                 temp[k++] = arr[j++];
 
-            // Copy back
             for (i = left; i <= right; i++)
                 arr[i] = temp[i];
         }

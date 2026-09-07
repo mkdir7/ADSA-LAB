@@ -51,16 +51,13 @@ void pop()
         return;
     }
  
-    // Move all elements except the last one
     while (q1.front < q1.rear)
     {
         enqueue(&q2, dequeue(&q1));
     }
  
-    // Last element is the stack top
     value = dequeue(&q1);
  
-    // Swap q1 and q2
     struct Queue temp = q1;
     q1 = q2;
     q2 = temp;

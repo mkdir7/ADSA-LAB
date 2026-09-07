@@ -36,16 +36,13 @@ int isEmpty(struct Queue *q)
 
 void push(int value)
 {
-    // Step 1: Insert into q2
     enqueue(&q2, value);
 
-    // Step 2: Move all q1 elements to q2
     while (!isEmpty(&q1))
     {
         enqueue(&q2, dequeue(&q1));
     }
 
-    // Step 3: Swap q1 and q2
     struct Queue temp = q1;
     q1 = q2;
     q2 = temp;
